@@ -462,8 +462,8 @@ export default {
   computed: {
     filteredList () {
       return this.itemList.filter(item => {
-        return item.title.toLowerCase().includes(this.search.toLowerCase()) || item.definition.toLowerCase().includes(this.search.toLowerCase())
-      }) || item.deutsch.toLowerCase().includes(this.search.toLowerCase())
+        return item.title.toLowerCase().includes(this.search.toLowerCase()) || item.definition.toLowerCase().includes(this.search.toLowerCase()) || item.title.toLowerCase().includes(this.search.toLowerCase())
+      })
     }
   }
 }
