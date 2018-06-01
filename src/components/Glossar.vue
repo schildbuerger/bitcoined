@@ -8,7 +8,7 @@
           <h2 class="subtitle">Glossar</h2>
           <div class="field">
             <p class="control has-icons-left">
-              <input  class="input is-large" type="text" v-model="search" placeholder="Suche"/>
+              <input  class="input is-large" type="text" v-model="search" placeholder="Suchfilter"/>
               <span class="icon is-small is-left">
                 <i class="fas fa-filter"></i>
               </span>
@@ -463,7 +463,7 @@ export default {
     filteredList () {
       return this.itemList.filter(item => {
         return item.title.toLowerCase().includes(this.search.toLowerCase()) || item.definition.toLowerCase().includes(this.search.toLowerCase())
-      })
+      }) || item.deutsch.toLowerCase().includes(this.search.toLowerCase())
     }
   }
 }
