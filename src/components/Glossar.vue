@@ -1,11 +1,19 @@
 <template>
+<section class="section">
   <div class="container">
-    <h2>Glossar</h2>
-    <div class="tile" v-for='item in items' :key='item'>
-        <h3 class="title"> {{ item.Topic }}</h3>
-        <p class="subtitle"> {{ item.Definition }} </p>
+    <div class="columns">
+      <div class="column"></div>
+      <div class="column">
+        <h1 class="title">Glossar der Kryptowährungen</h1>
+        <div class="message" v-for='item in items' :key='item'>
+            <h3 class="message-header"> {{ item.Topic }} ({{ item.Deutsch }})</h3>
+            <p class="has-text-left message-body"> {{ item.Definition }} </p>
+        </div>
+      </div>
+      <div class="column"></div>
     </div>
   </div>
+</section>
 </template>
 
 <script>
