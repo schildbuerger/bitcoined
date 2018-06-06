@@ -1,15 +1,16 @@
 <template>
   <div id="app">
-    <glossar></glossar>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
 import Glossar from './components/Glossar.vue'
+import FireGlossar from './components/FireGlossar.vue'
 
 export default {
   name: 'App',
-  components: {Glossar}
+  components: {Glossar, FireGlossar}
 }
 </script>
 
