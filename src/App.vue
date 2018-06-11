@@ -6,11 +6,10 @@
 
 <script>
 import Glossar from './components/Glossar.vue'
-import FireGlossar from './components/FireGlossar.vue'
 
 export default {
   name: 'App',
-  components: {Glossar, FireGlossar}
+  components: {Glossar}
 }
 </script>
 
