@@ -15,7 +15,7 @@
             </p>
           </div>
           <div class="message" v-for='item in filteredList' :key='item'>
-              <h3 class="message-header"> {{ item.name }} <span v-if="item.translation.length === 0"></span><span v-else>({{ item.translation }})</span></h3>
+              <h3 class="message-header"> {{ item.name }} <span v-if="item.translation.length > 0">({{ item.translation }})</span></h3>
               <p class="has-text-left message-body"> {{ item.description }} </p>
           </div>
         </div>
