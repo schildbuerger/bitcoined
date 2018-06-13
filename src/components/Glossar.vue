@@ -41,7 +41,7 @@ export default {
     filteredList () {
       return this.glossar.filter(item => {
         return item.name.toLowerCase().includes(this.search.toLowerCase()) || item.description.toLowerCase().includes(this.search.toLowerCase()) || item.translation.toLowerCase().includes(this.search.toLowerCase())
-      })
+      }).sort((a, b) => { return a.name > b.name })
     }
   },
   firebase: {
